@@ -91,6 +91,11 @@ img {
   color: #2e2f42;
 }
 
+/* .nav-item:active:after {
+  color: #404bbf;
+  text-decoration: underline;
+} */
+
 .contacts {
   font-style: normal;
   margin-left: auto;
@@ -120,6 +125,12 @@ img {
 .title-page {
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  
+
 }
 
 .title-container {
@@ -180,6 +191,11 @@ img {
   margin-bottom: 8px;
 }
 
+.features-icon {
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
 .team-page {
   background-color: #f4f4fd;
 }
@@ -193,9 +209,9 @@ img {
   border-radius: 0 0 4px 4px;
 }
 
-.team-div {
+/* .team-div {
   padding: 32px 0;
-}
+} */
 .team-subtitle {
   text-align: center;
   margin-bottom: 8px;
@@ -219,6 +235,18 @@ img {
 
 .team-descr {
   text-align: center;
+}
+
+.team-list-icon {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 32px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.team-icon {
+  padding: 12px;
 }
 
 .features-subtitle,
@@ -292,4 +320,25 @@ img {
 
 .text-footer {
   max-width: 264px;
+}
+
+.footer-social-text {
+  font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+text-align: start;
+padding-bottom: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 120px;
+  align-items: center;
 }
