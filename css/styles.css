@@ -91,16 +91,15 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
-/* !!!!!!!!!!!! */
 
-.nav-link:active::after {
+/* .nav-link:active::after {
   content: " ";
   color: #404bbf;
   border-radius: 2px;
   width: 48px;
   height: 4px;
   background-color: #404bbf;
-}
+} */
 
 .contacts {
   font-style: normal;
@@ -121,6 +120,26 @@ img {
 .nav-link:focus,
 .contacts-link:focus {
   color: #404bbf;
+}
+
+nav ul li {
+  display: inline;
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 20px; 
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px;
+height: 4px;
+background: #404bbf;
 }
 
 .title-page,
@@ -278,16 +297,16 @@ img {
   background-color: #4d5ae5;
   width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
+  display: block;
+  text-align: center;
+  padding: 12px 12px;
   transition-property: background-color;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .list-icon:hover {
   background-color: #31d0aa;
-  transition-duration: 0.5s;
 }
 
 .features-subtitle,
@@ -323,12 +342,13 @@ img {
 .portfolio-item {
   box-shadow: none;
   transition-property: box-shadow;
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    transition-duration: 0.5s;
 }
 
 .portfolio-subtitle {
@@ -340,6 +360,35 @@ img {
   border-right: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
   padding: 32px 16px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  align-items: center;
+  background: #4d5ae5;
+  transform: translatey(100%);
+  transition: transform 250ms ease-in-out;
+  padding: 40px 32px 164px 32px;
+}
+
+.overlay-item:hover .overlay-text {
+  transform: translateX(0);
+}
+.overlay-item {
+  position: relative;
+  width: 360px;
+  height: 300px;
+  overflow: hidden;
 }
 
 .visually-hidden {
