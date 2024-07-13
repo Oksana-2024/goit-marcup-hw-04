@@ -344,11 +344,13 @@ background: #404bbf;
   transition-property: box-shadow;
   transition-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .portfolio-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    cursor: pointer;
 }
 
 .portfolio-subtitle {
@@ -381,14 +383,14 @@ background: #404bbf;
   padding: 40px 32px 164px 32px;
 }
 
-.overlay-item:hover .overlay-text {
-  transform: translateX(0);
-}
-.overlay-item {
-  position: relative;
-  width: 360px;
+.portfolio-item .overlay-text{
+   width: 360px;
   height: 300px;
   overflow: hidden;
+}
+
+.portfolio-item:hover .overlay-text {
+  transform: translateX(0);
 }
 
 .visually-hidden {
