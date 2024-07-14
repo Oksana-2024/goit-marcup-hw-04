@@ -120,15 +120,14 @@ img {
 .contacts-link:hover,
 .nav-link:focus,
 .contacts-link:focus {
-  
-  
+  color: #404bbf;
 }
 
 nav ul li {
   display: inline;
 }
 
-.nav-link::after {
+.current::after {
   content: "";
   position: absolute;
   left: 0;
