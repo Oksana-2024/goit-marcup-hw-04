@@ -78,9 +78,6 @@ img {
   gap: 40px;
 }
 
-.nav-item {
-  color: #404bbf;
-}
 .contacts-list {
   display: flex;
   align-items: center;
@@ -123,7 +120,8 @@ img {
 .contacts-link:hover,
 .nav-link:focus,
 .contacts-link:focus {
-  color: #404bbf;
+  
+  
 }
 
 nav ul li {
@@ -139,7 +137,12 @@ nav ul li {
   border-radius: 2px;
   height: 4px;
   background: #404bbf;
+  
 }
+
+ .nav-item .current {
+  color: #404bbf;
+ }
 
 .title-page,
 .footer-page {
