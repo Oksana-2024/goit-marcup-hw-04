@@ -92,15 +92,6 @@ img {
   color: #2e2f42;
 }
 
-/* .nav-link:active::after {
-  content: " ";
-  color: #404bbf;
-  border-radius: 2px;
-  width: 48px;
-  height: 4px;
-  background-color: #404bbf;
-} */
-
 .contacts {
   font-style: normal;
   margin-left: auto;
@@ -113,6 +104,10 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .nav-link:hover,
@@ -128,7 +123,10 @@ nav ul li {
 
 .nav-link {
   position: relative;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link::after {
@@ -138,8 +136,8 @@ nav ul li {
   right: 0;
   bottom: 0;
   border-radius: 2px;
-height: 4px;
-background: #404bbf;
+  height: 4px;
+  background: #404bbf;
 }
 
 .title-page,
@@ -196,6 +194,9 @@ background: #404bbf;
   min-width: 169px;
   height: 56px;
   border: none;
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-title-page:hover,
@@ -221,7 +222,7 @@ background: #404bbf;
   margin-bottom: 8px;
 }
 
-.box-icon {
+.features-box-icon {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 264px;
@@ -233,6 +234,26 @@ background: #404bbf;
   align-content: center;
   justify-content: center;
 }
+
+.features-subtitle,
+.team-subtitle,
+.portfolio-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.features-descr,
+.team-descr,
+.portfolio-descr,
+.text-footer {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
 .team-page {
   background-color: #f4f4fd;
 }
@@ -288,49 +309,10 @@ background: #404bbf;
   flex-direction: row;
 }
 
-.team-icon {
-  fill: #f4f4fd;
-}
-
-.list-icon {
-  border-radius: 50%;
-  background-color: #4d5ae5;
-  width: 40px;
-  height: 40px;
-  display: block;
-  text-align: center;
-  padding: 12px 12px;
-  transition-property: background-color;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
-.list-icon:hover {
-  background-color: #31d0aa;
-}
-
-.features-subtitle,
-.team-subtitle,
-.portfolio-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.features-descr,
-.team-descr,
-.portfolio-descr,
-.text-footer {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
 .title-portfolio-page {
   margin-bottom: 72px;
 }
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -344,13 +326,13 @@ background: #404bbf;
   transition-property: box-shadow;
   transition-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
   position: relative;
 }
 
 .portfolio-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    cursor: pointer;
 }
 
 .portfolio-subtitle {
@@ -364,7 +346,7 @@ background: #404bbf;
   padding: 32px 16px;
 }
 
-.overlay-text {
+.portfolio-overlay-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -380,16 +362,17 @@ background: #404bbf;
   background: #4d5ae5;
   transform: translatey(100%);
   transition: transform 250ms ease-in-out;
-  padding: 40px 32px 164px 32px;
+  padding: 40px 32px 40px 32px;
 }
 
-.portfolio-item .overlay-text{
-   width: 360px;
+.portfolio-overlay {
+  width: 360px;
   height: 300px;
   overflow: hidden;
+  position: relative;
 }
 
-.portfolio-item:hover .overlay-text {
+.portfolio-item:hover .portfolio-overlay-text {
   transform: translateX(0);
 }
 
@@ -444,4 +427,29 @@ background: #404bbf;
   display: flex;
   gap: 120px;
   align-items: start;
+}
+
+.icon-icon {
+  fill: #f4f4fd;
+}
+
+.list-icon {
+  width: 40px;
+  height: 40px;
+  }
+
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  display: block;
+  padding: 12px 12px;
+  transition-property: background-color;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.team-soc-link:hover {
+  background-color: #31d0aa;
 }
